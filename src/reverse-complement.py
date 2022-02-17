@@ -6,7 +6,7 @@ VERSION
     1.0
     
 AUTHOR
-	
+	Gabriel Ramírez Vilchis
     
 DESCRIPTION
 	Make the reverse complement of DNA sequence
