@@ -3,7 +3,7 @@ NAME
 	reverse-complement.py
     
 VERSION
-    2.0
+    3.0
     
 AUTHOR
 	Gabriel Ramírez Vilchis
