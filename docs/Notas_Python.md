@@ -245,4 +245,30 @@ La rama __master__ es la empleada por defecto en Git
 Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD~1, el tercero el HEAD~2, y así sucesivamente.
 
 ### Restaurar una versión  
-Para restaurar una
+Para restaurar una versión usamos `git checkout [HEAD|IdCommit] [file]`
+
+
+
+git log
+
+git log -N
+
+git log --oneline
+
+git diff HEAD ~#
+
+
+
+El archivo **.gitignore** le indica a Git cuáles son los archivos que debe ignorar.
+
+
+
+## GitHub
+
+GitHub es una plataforma web que permite alojar proyectos basados en Git, haciendo 
+
+### GitHub Desktop
+
+GitHub Desktop es la interfaz gráfica de GitHub, que permite la interacción con la plataforma desde nuestra plataforma.
+
+Pull baja información y push la sube
