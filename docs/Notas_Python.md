@@ -276,3 +276,6 @@ Pull baja información y push la sube
 
 _3 de marzo de 2022_  
 `git credential-oskeychain erase` borra las credenciales previas
+
+## Comentarios
+Tienes unos apuntes muy ordenados <3
