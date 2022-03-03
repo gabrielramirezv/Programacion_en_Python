@@ -10,13 +10,46 @@ _3 de febrero de 2022_
 
 ### ¿Qué es Markdown?  
 
-- Lenguaje de marcado.  
-- Basado en texto plano.  
-- Fácil de exportar a otros formatos.  
+- Es un **lenguaje de marcado** ligero.  
+- Permite agregar **formatos** como:  
+  - Encabezados  
+  - Negritas  
+  - Cursivas  
+  - Listas  
+  - ¡Y mucho más!  
+- Basado en **texto plano**.  
+- Es **minimalista**.
+- Fácil de exportar a **otros formatos**.  
 
-### Buenas prácticas  
+#### ¿Por qué usar Markdown?  
+- Es **rápido y cómodo**.  
+- Sintaxis sencilla.  
+- Editores de texto **minimalistas**.  
+- Se puede **compartir** con otros dispositivos.
+
+
+#### Editores de Markdown 
+
+##### Windows  
+- MarkdownPad  
+- DownMarker  
+- MarkPad  
+
+##### MacOS  
+- Typora  
+- MacDown  
+
+##### Linux  
+- Springseed  
+- Remarkable  
+
+
+### Tomar notas con Markdown  
 
 Es una buena práctica guardar un archivo de Markdown al abrirlo, antes de comenzar a escribir.  
+
+#### Encabezados
+Para insertar un encabezado se utiliza el caracter '#'. Por cada '#' adicional se entiende que dicho encabezado está subordinado a cierto nivel en la estructura del texto.
 
 > "Así se agrega una cita"  
 
