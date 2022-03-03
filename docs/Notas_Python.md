@@ -272,3 +272,7 @@ GitHub es una plataforma web que permite alojar proyectos basados en Git, hacien
 GitHub Desktop es la interfaz gráfica de GitHub, que permite la interacción con la plataforma desde nuestra plataforma.
 
 Pull baja información y push la sube
+
+
+_3 de marzo de 2022_  
+`git credential-oskeychain erase` borra las credenciales previas
