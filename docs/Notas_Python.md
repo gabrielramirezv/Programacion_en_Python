@@ -1,12 +1,20 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" width="120" height="120" align="right" />
+
 # Notas - Programación en Python  
 
 **Gabriel Ramírez Vilchis**  
+
+Licenciatura en Ciencias Genómicas
+
+
 
 
 
 ## Markdown  
 
 _3 de febrero de 2022_  
+
+
 
 ### ¿Qué es Markdown?  
 
@@ -25,7 +33,7 @@ _3 de febrero de 2022_
 - Es **rápido y cómodo**.  
 - Sintaxis sencilla.  
 - Editores de texto **minimalistas**.  
-- Se puede **compartir** con otros dispositivos.
+- Se puede **compartir** con otros dispositivos.  
 
 
 #### Editores de Markdown 
@@ -44,54 +52,104 @@ _3 de febrero de 2022_
 - Remarkable  
 
 
+
+
 ### Tomar notas con Markdown  
 
 Es una buena práctica guardar un archivo de Markdown al abrirlo, antes de comenzar a escribir.  
 
-#### Encabezados
-Para insertar un encabezado se utiliza el caracter '#'. Por cada '#' adicional se entiende que dicho encabezado está subordinado a cierto nivel en la estructura del texto.
+#### Encabezados  
+Para insertar un encabezado se utiliza el caracter '#' al inicio del texto. Por cada '#' adicional se entiende que dicho encabezado está subordinado a cierto nivel en la estructura del texto.  Por ejemplo:
+
+Sintaxis: `# Título`  
+
+# Título  
+
+Sintaxis: `## Subtítulo`  
+
+## Subtítulo  
+
+Sintaxis: `### Sub-subtítulo`  
+
+### Sub-subtítulo  
+
+¡Así se pueden tener notas mejor organizadas!  
+
+#### Formatos  
+
+##### Negritas  
+
+Hay dos opciones para escribir en **negritas**. La primera es usar `**dos asteriscos**` rodeando la palabra o frase a resaltar, mientras que la segunda es utilizar `__dos guiones bajos__` de la misma manera.  
+
+##### Cursivas  
+
+Para escribir en _cursivas_ también pueden usarse guiones bajos o asteriscos, pero de manera sencilla; es decir, `*con asteriscos*` o `_con guiones bajos_`.  
+
+##### Citas  
+
+Para agregar una cita se coloca el caracter '>' antes del texto que corresponde a la cita.  
 
 > "Así se agrega una cita"  
 
-Negritas usar doble guion bajo o doble asterisco.  
+##### Saltos de línea  
 
+Para agregar saltos de línea deben agregarse dos espacios en blanco al final de cada línea.  
 
+#### Listas  
 
-### Listas  
+En Markdown pueden usarse listas desordenadas u ordenadas.   
 
-Se escribe el número seguido de un punto, un espacio y el elemento de la lista ordenada
+##### Listas desordenadas  
 
-1. d  
+Para crear **listas desordenadas** se escribe un guión, un espacio y el elemento de la lista.  
 
+- Elemento 1  
+- Elemento 2  
+- Elemento 3  
 
+##### Listas ordenadas
 
-### Código  
+Para crear **listas ordenadas** se escribe el número seguido de un punto, un espacio y el elemento de la lista ordenada.  
 
-Si queremos insertar una sola línea de código, podemos hacerlo `con dos acentos graves`  
+1. Elemento 1  
+2. Elemento 2  
+3. Elemento 3  
 
-También podemos agregar bloques:  
+#### Código  
 
+Si queremos insertar una sola línea de código, podemos hacerlo `con dos acentos graves` alrededor de la línea de código.  
 
+También podemos agregar bloques de código al colocar tres acentos graves seguidos de un salto de línea:  
 
 ```python
-/// Esto es un bloque de código
+# Esto es un bloque de código  
 ```
 
-`` texto en **negritas**``*  
+#### Links  
 
+Se puede agregar un link que funcione al hacer click sobre un texto con la sintaxis `[Texto](url)`. Por ejemplo:  
 
+Aquí puedes consultar el sitio de la [LCG](https://www.lcg.unam.mx).  
 
-
-
-### Links  
-
-Aquí puedes consultar el sitio de la [LCG](https://www.lcg.unam.mx).
+También puede colocarse el link sin ninguna palabra o frase relacionada con la sintaxis `<url>`. Por ejemplo:  
 
 <https://www.lcg.unam.mx/>  
 
+#### Imágenes  
 
+Para agregar imágenes podemos utilizar alguna de las siguientes sintaxis:
 
-Ejemplos de marcado  
+1. Usando la URL en donde se encuentra la imagen: `![LogoMarkdown](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Markdown")`  
+
+   ![LogoMarkdown](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Markdown")
+
+2. Indicando la ruta en donde se encuentra la imagen: `![](./img/facebook_icon.png "logo fb")`  
+
+3. Usando código HTML para definir el tamaño de la imagen: `<img src="./img/logoMarkdown.png" width="50" height="50" />`  
+
+#### Tablas  
+
+Se usan pipes '|' y guiones '-' para generar el formato de tabla. Por ejemplo:  
 
 | Formato   | Etiqueta |
 | --------- | -------- |
@@ -103,15 +161,15 @@ Ejemplos de marcado
 
 
 ## Git  
-_10y 17 de febrero de 2022_  
+_10, 17 y 24 de febrero de 2022_  
+
+
 
 ### Introducción  
 
 #### ¿Qué queremos lograr con el desarrollo de un software?  
 
 Es importante saber cuál es el problema a resolver. Debemos codificar de tal manera que si se lo pasamos a a alguien más, esa persona pueda continuar con nuestro código.  
-
-
 
 #### ¿Cómo lograrlo?  
 
@@ -166,8 +224,6 @@ minor es para cambios menores
 - Minor
 
 - Ejemplo: myScript_v0.1.py
-
-
 
 ##### Forma automática
 
@@ -230,7 +286,7 @@ Git es un sistema de control de versiones que permite el trabajo colaborativo.
 
 ### Esquema de trabajo
 
-Git no controla todo lo que se almacene en el repositorio Git, por lo que hay que indicarle que lo haga usando `git add`, con lo que empezará a preparar alamacenando temporalmente los cambios, y cuando le indiquemos que confirme esos cambios usamos `git commit`
+Git no controla todo lo que se almacene en el repositorio Git, por lo que hay que indicarle que lo haga usando `git add`, con lo que empezará a preparar almacenando temporalmente los cambios, y cuando le indiquemos que confirme esos cambios usamos `git commit`
 
 Repositorio: carpeta que contiene el seguimiento de los cambios que se realicen en el código.
 
@@ -275,7 +331,7 @@ Escribir un mensaje que describa con precisión los cambios que se han realizado
 ### Ramas de Git  
 La rama __master__ es la empleada por defecto en Git
 
-Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD~1, el tercero el HEAD~2, y así sucesivamente.
+Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD\~1, el tercero el HEAD\~2, y así sucesivamente.
 
 ### Restaurar una versión  
 Para restaurar una versión usamos `git checkout [HEAD|IdCommit] [file]`
@@ -296,7 +352,11 @@ El archivo **.gitignore** le indica a Git cuáles son los archivos que debe igno
 
 
 
-## GitHub
+
+
+## GitHub  
+
+_24 de febrero y 3 de marzo de 2022_  
 
 GitHub es una plataforma web que permite alojar proyectos basados en Git, haciendo 
 
@@ -306,9 +366,9 @@ GitHub Desktop es la interfaz gráfica de GitHub, que permite la interacción co
 
 Pull baja información y push la sube
 
+`git credential-oskeychain erase` borra las credenciales previas.  
 
-_3 de marzo de 2022_  
-`git credential-oskeychain erase` borra las credenciales previas
+
 
 ## Comentarios
 Tienes unos apuntes muy ordenados <3
