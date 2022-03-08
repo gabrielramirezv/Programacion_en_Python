@@ -6,15 +6,9 @@
 
 Licenciatura en Ciencias Genómicas
 
-
-
-
-
 ## Markdown  
 
 _3 de febrero de 2022_  
-
-
 
 ### ¿Qué es Markdown?  
 
@@ -30,35 +24,36 @@ _3 de febrero de 2022_
 - Fácil de exportar a **otros formatos**.  
 
 #### ¿Por qué usar Markdown?  
+
 - Es **rápido y cómodo**.  
 - Sintaxis sencilla.  
 - Editores de texto **minimalistas**.  
 - Se puede **compartir** con otros dispositivos.  
 
-
-#### Editores de Markdown 
+#### Editores de Markdown
 
 ##### Windows  
+
 - MarkdownPad  
 - DownMarker  
 - MarkPad  
 
 ##### MacOS  
+
 - Typora  
 - MacDown  
 
 ##### Linux  
+
 - Springseed  
 - Remarkable  
-
-
-
 
 ### Tomar notas con Markdown  
 
 Es una buena práctica guardar un archivo de Markdown al abrirlo, antes de comenzar a escribir.  
 
 #### Encabezados  
+
 Para insertar un encabezado se utiliza el caracter '#' al inicio del texto. Por cada '#' adicional se entiende que dicho encabezado está subordinado a cierto nivel en la estructura del texto.  Por ejemplo:
 
 Sintaxis: `# Título`  
@@ -97,7 +92,7 @@ Para agregar saltos de línea deben agregarse dos espacios en blanco al final de
 
 #### Listas  
 
-En Markdown pueden usarse listas desordenadas u ordenadas.   
+En Markdown pueden usarse listas desordenadas u ordenadas.
 
 ##### Listas desordenadas  
 
@@ -156,14 +151,9 @@ Se usan pipes '|' y guiones '-' para generar el formato de tabla. Por ejemplo:
 | Título    | `#`      |
 | Subtítulo | `##`     |
 
-
-
-
-
 ## Git  
+
 _10, 17 y 24 de febrero de 2022_  
-
-
 
 ### Introducción  
 
@@ -187,10 +177,7 @@ Al desarrollar software buscamos:
 
 - Resolver problema
 
-
-
 La solución debe tener prácticas y características que permitan recordar o que otras personas lo entiendan
-
 
 ### Buenas prácticas
 
@@ -244,10 +231,6 @@ Ejemplos:
 - Se conserva toda la historia de los cambios en nuestro código.
 - Permite que varias personas trabajen en paralelo.
 
-
-
-
-
 ### ¿Qué es Git?
 
 Git es un sistema de control de versiones que permite el trabajo colaborativo.
@@ -265,24 +248,16 @@ Git es un sistema de control de versiones que permite el trabajo colaborativo.
 - Contribución para mejoras
 - Acceso de otras personas al código sin afectarlo
 
-
-
 #### Trabajar con Git
 
 1. Instalar y configurar
 2. Esquema de trabajo
 
-
-
 ### Comandos importantes
 
 `git --version`Devuelve la versión de Git instalada
 
-
-
 `git config --global user.name "[TuNombre]"`
-
-
 
 ### Esquema de trabajo
 
@@ -290,12 +265,10 @@ Git no controla todo lo que se almacene en el repositorio Git, por lo que hay qu
 
 Repositorio: carpeta que contiene el seguimiento de los cambios que se realicen en el código.
 
-
-
 ### Crear un repositorio
 
 - Definir la ruta de trabajo
-- Crear una carpeta 
+- Crear una carpeta
 
 #### Buenas prácticas
 
@@ -306,13 +279,7 @@ Seguir una estructura de organización de carpetas y archivos para proyectos.
 - src
 - test
 
-
-
 ¡No meterse con .git!
-
-
-
-
 
 Git es el controlador de versiones
 
@@ -322,21 +289,19 @@ git add
 
 git commit -m "Mensaje"
 
-
-
 ### Mensaje para el commit
 
-Escribir un mensaje que describa con precisión los cambios que se han realizado. Alrededor de 50 caracteres. 
+Escribir un mensaje que describa con precisión los cambios que se han realizado. Alrededor de 50 caracteres.
 
 ### Ramas de Git  
-La rama __master__ es la empleada por defecto en Git
+
+La rama **master** es la empleada por defecto en Git
 
 Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD\~1, el tercero el HEAD\~2, y así sucesivamente.
 
 ### Restaurar una versión  
+
 Para restaurar una versión usamos `git checkout [HEAD|IdCommit] [file]`
-
-
 
 git log
 
@@ -346,19 +311,13 @@ git log --oneline
 
 git diff HEAD ~#
 
-
-
 El archivo **.gitignore** le indica a Git cuáles son los archivos que debe ignorar.
-
-
-
-
 
 ## GitHub  
 
 _24 de febrero y 3 de marzo de 2022_  
 
-GitHub es una plataforma web que permite alojar proyectos basados en Git, haciendo 
+GitHub es una plataforma web que permite alojar proyectos basados en Git, haciendo
 
 ### GitHub Desktop
 
@@ -368,7 +327,6 @@ Pull baja información y push la sube
 
 `git credential-oskeychain erase` borra las credenciales previas.  
 
-
-
 ## Comentarios
+
 Tienes unos apuntes muy ordenados <3
