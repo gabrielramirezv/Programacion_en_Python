@@ -1,3 +1,9 @@
 
 *.dat
 results/
+src/count.py
+src/count.py
+src/dna_count.py
+src/dna_reverse.py
+src/funciones_y_metodos.py
+src/start_codon.py
