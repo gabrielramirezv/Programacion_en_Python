@@ -327,6 +327,89 @@ Pull baja información y push la sube
 
 `git credential-oskeychain erase` borra las credenciales previas.  
 
+
+
+Se usan casos de uso para describir los problemas.
+
+- Usar estándar PEP8
+- No escribir "código spaghetti o repetir"
+  - Refactorizar: Q
+- Comentar el código, iniciando con un encabezado
+  - TITLE
+  - VERSION
+  - AUTHOR
+  - DESCRIPTION
+  - CATHEGORY
+  - USAGE
+  - ARGUMENTS
+- La primera versión que se sube a GitHub debe tener el algoritmo de lo que se desea hacer sin codificar.
+
+
+
+## Introducción a Python
+
+Python es un lenguaje interpretado, por lo que lee las instrucciones y las ejecuta en tiempo real.
+
+### Filosofía de Python
+
+Se espera que podamos entender el código de cualquier persona, y que cualquier persona pueda entender nuestro código, es decir, se busca que sea legible para los humanos. Python fue creado por Guido van Rossum buscando desarrollar un lenguaje más sencillo para los programadores. Los principales objetivos al crear Python eran un lenguaje amigable.
+
+### Versiones de Python
+
+No son recomendables las versiones beta.
+
+Es preferible usar Python 3 porque tiene soporte por parte del equipo de desarrollo, sólo usamos Python 2 cuando el programa ya estaba hecho en Python 2 y es complicado pasarlo a Python 3
+
+### Comandos sistema
+
+
+
+### Ecosistema de Python
+
+d
+
+### Tipos de datos
+
+#### Números y sus operadores
+
+Python sirve como una calculadora
+
+#### Strings
+
+Son cadenas de caracteres y pueden estar encerradas entre comillas simples ('...') o comillas dobles ("...")
+
+
+
+En Python, cada dato en un programa es un objeto.
+
+- Dato es un valor
+  - Enteros
+  - Flotantes
+  - Cadenas
+- Objeto tiene
+  - Identificador
+  - Tipo
+  - Valor
+- Funcionalidades por tipo de objeto definidas por Python: métodos
+- Funciones no están vinculadas a objetos
+
+
+
+- Input: Dar una variable
+
+  - input(): Ingresar un valor
+  - open(): Lee archivos
+  - Argumentos: Pasar argumentos por medio de la línea de comandos
+
+  ```python
+  dna = input('Dame una secuencia de DNA:\n')
+  print(dna)
+  ```
+
+  
+
+
+
 ## Comentarios
 
 Tienes unos apuntes muy ordenados <3
