@@ -8,14 +8,15 @@ Repositorio para la clase "Programación en Python" de la Licenciatura en Cienci
 
 ## Estructura  
 
-├── data     # Archivos compilados</p>
+├── data     # Archivos con datos necesarios para algunos scripts</p>
 ├── docs     # Archivos de notas y documentación (.txt, .md)</p>
 ├── lib         # Librerías y dependencias</p>
+├── results      # Archivos con resultados generados por scripts</p>
 ├── src        # Scripts de programas en Python</p>
 ├── test       # Archivos para pruebas</p>
 ├── README.md        # Archivo de descripción del repositorio</p>
 ├── LICENSE.md        # Licencia de uso</p>
-└── .gitignore            # Archivo que especifica los archivos que git no debe controlar</p>
+└── .gitignore            # Archivo que especifica los archivos que Git no debe controlar</p>
 
 ## Motivación  
 
