@@ -3,13 +3,13 @@ NAME
     dna-fasta
 
 VERSION
-    0.1
+    0.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/dna-fasta.py
 
 DESCRIPTION
     Dado un archivo dna.txt que contiene una secuencia de DNA, genera
