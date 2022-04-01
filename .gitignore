@@ -1,6 +1,5 @@
 
 *.dat
-results/
 src/count.py
 src/count.py
 src/dna_count.py
