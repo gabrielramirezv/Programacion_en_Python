@@ -3,7 +3,7 @@ NAME
     dna-fasta
 
 VERSION
-    0.2
+    0.3
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -19,7 +19,7 @@ CATEGORY
     DNA sequence
 
 USAGE
-    py dna-fasta.py
+    py src/dna-fasta.py
 
 ARGUMENTS
     None
@@ -42,4 +42,6 @@ SEE ALSO
 
 ## 3. Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
 
-## 4. Fin
+## 4. Informar al usuario que el archivo FASTA se ha creado
+
+## 5. Fin
