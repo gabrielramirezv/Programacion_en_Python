@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    1.0
+    1.1
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -57,4 +57,7 @@ AT_percentage = ((a_count + t_count) / dna_length) * 100
 GC_percentage = ((g_count + c_count) / dna_length) * 100
 
 # Imprimir resultados
-print(f"La secuencia de DNA es {dna_sequence}\n Porcentaje de AT y GC\n AT: {AT_percentage} %\n GC: {GC_percentage} %")
+print(f"La secuencia de DNA es {dna_sequence}\
+      \n Porcentaje de AT y GC\
+      \n AT: {AT_percentage} %\
+      \n GC: {GC_percentage} %")
