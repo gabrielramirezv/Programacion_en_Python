@@ -3,7 +3,7 @@ NAME
     nucleotide-count
 
 VERSION
-    1.0
+    1.1
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -44,4 +44,8 @@ c_count = dna_sequence.count('C')
 g_count = dna_sequence.count('G')
 
 # Imprimir resultados
-print(f"El total por base es:    A: {a_count}  T: {t_count}  C: {c_count}  G: {g_count}")
+print(f"El total por base es: \
+      A: {a_count} \
+      T: {t_count} \
+      C: {c_count} \
+      G: {g_count}")
