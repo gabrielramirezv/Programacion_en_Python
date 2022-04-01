@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    1.2
+    1.3
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -35,7 +35,7 @@ SEE ALSO
 '''
 
 # Leer desde teclado la ruta y nombre del archivo con la secuencia
-dna_file_name = input("Archivo de secuencia: ")
+dna_file_name = input("\nArchivo de secuencia: ")
 
 # Abrir el archivo, leer el contenido y cerrar el archivo
 dna_file = open(dna_file_name, 'r')
@@ -57,7 +57,7 @@ at_percentage = ((a_count + t_count) / dna_length) * 100
 gc_percentage = ((g_count + c_count) / dna_length) * 100
 
 # Imprimir resultados
-print(f"La secuencia de DNA es {dna_sequence}\
+print(f"\nLa secuencia de DNA es {dna_sequence}\
       \n Porcentaje de AT y GC\
       \n AT: {at_percentage} %\
-      \n GC: {gc_percentage} %")
+      \n GC: {gc_percentage} %\n")
