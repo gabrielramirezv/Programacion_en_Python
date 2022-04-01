@@ -3,13 +3,13 @@ NAME
     AT_GC_percentage
 
 VERSION
-    0.1
+    0.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/AT_GC_percentage.py
 
 DESCRIPTION
     Calcula el porcentaje de AT y GC de una secuencia de DNA
