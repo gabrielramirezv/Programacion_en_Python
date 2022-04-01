@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    1.1
+    1.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -53,11 +53,11 @@ c_count = dna_sequence.count('C')
 dna_length = len(dna_sequence)
 
 # Calcular porcentaje de AT y GC en la secuencia de DNA
-AT_percentage = ((a_count + t_count) / dna_length) * 100
-GC_percentage = ((g_count + c_count) / dna_length) * 100
+at_percentage = ((a_count + t_count) / dna_length) * 100
+gc_percentage = ((g_count + c_count) / dna_length) * 100
 
 # Imprimir resultados
 print(f"La secuencia de DNA es {dna_sequence}\
       \n Porcentaje de AT y GC\
-      \n AT: {AT_percentage} %\
-      \n GC: {GC_percentage} %")
+      \n AT: {at_percentage} %\
+      \n GC: {gc_percentage} %")
