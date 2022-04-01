@@ -3,7 +3,7 @@ NAME
     nucleotide-count
 
 VERSION
-    1.1
+    1.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -18,7 +18,7 @@ CATEGORY
     DNA sequence
 
 USAGE
-    py nucleotide-count.py
+    py src/nucleotide-count.py
 
 ARGUMENTS
     None
