@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    1.3
+    1.4
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -18,7 +18,7 @@ CATEGORY
     DNA sequence
 
 USAGE
-    py AT_GC_percentage.py
+    py src/AT_GC_percentage.py
 
 ARGUMENTS
     None
