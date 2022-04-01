@@ -25,6 +25,8 @@ ARGUMENTS
 
 INPUT
     Ruta y nombre de un archivo que contiene una secuencia de DNA
+    Al ejecutarse, se lee el archivo indicado por el usuario
+    Nota: Los archivos con datos para programas se hallan en data/
 
 OUTPUT
     Porcentaje de AT y GC en la secuencia de DNA
