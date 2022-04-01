@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    0.2
+    0.3
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -42,8 +42,10 @@ SEE ALSO
 
 ## 4. Eliminar caracteres ajenos a la secuencia de DNA
 
-## 5. Calcular porcentaje de AT y GC en la secuencia de DNA
+## 5. Contar A, T, G, C y la longitud de la secuencia
 
-## 6. Imprimir resultados
+## 6. Calcular porcentaje de AT y GC en la secuencia de DNA
 
-## 7. Fin
+## 7. Imprimir resultados
+
+## 8. Fin
