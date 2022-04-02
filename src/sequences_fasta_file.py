@@ -3,7 +3,7 @@ NAME
     sequences_fasta_file
 
 VERSION
-    1.0
+    1.1
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -25,6 +25,8 @@ ARGUMENTS
 
 INPUT
     Archivo data/dna_sequences.txt con las secuencias de DNA
+    Nota: Las columnas de seq_id y secuencia se hallan separadas por
+    tres espacios (barra espaciadora)
 
 OUTPUT
     Archivo results/dna_sequences.fasta con las secuencias de DNA en 
