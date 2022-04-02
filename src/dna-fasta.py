@@ -3,7 +3,7 @@ NAME
     dna-fasta
 
 VERSION
-    1.0
+    1.1
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -47,4 +47,5 @@ fasta_file.write(f">sequence_name\n{dna_sequence}")
 fasta_file.close()
 
 # Informar al usuario que el archivo FASTA se ha creado
-print("\nSe ha generado el archivo dna.fasta \nEl archivo se encuentra disponible en la carpeta results/ \n")
+print("\nSe ha generado el archivo dna.fasta \
+      \nEl archivo se encuentra disponible en la carpeta results/ \n")
