@@ -3,13 +3,13 @@ NAME
     sequences_fasta_file
 
 VERSION
-    0.1
+    0.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/sequences_fasta_file.py
 
 DESCRIPTION
     Dado un archivo de secuencias, las convierte en formato FASTA
