@@ -36,19 +36,15 @@ SEE ALSO
 
 '''
 
-## 1. Inicio
-
-## 2. Abrir el archivo, leer el contenido y cerrar el archivo
+# Abrir el archivo, leer el contenido y cerrar el archivo
 dna_file = open("data/dna.txt", 'r')
 dna_sequence = dna_file.read()
 dna_file.close()
 
-## 3. Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
+# Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
 fasta_file = open("results/dna.fasta", 'w')
 fasta_file.write(f">sequence_name\n{dna_sequence}")
 fasta_file.close()
 
-## 4. Informar al usuario que el archivo FASTA se ha creado
+# Informar al usuario que el archivo FASTA se ha creado
 print("\nSe ha generado el archivo dna.fasta \nEl archivo se encuentra disponible en la carpeta results/ \n")
-
-## 5. Fin
