@@ -3,13 +3,13 @@ NAME
     sequence-trimming
 
 VERSION
-    0.1
+    0.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/sequence-trimming.py
 
 DESCRIPTION
     Corta los adaptadores de las secuencias que se encuentran en el 
