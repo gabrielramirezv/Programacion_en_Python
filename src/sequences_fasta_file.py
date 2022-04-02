@@ -3,7 +3,7 @@ NAME
     sequences_fasta_file
 
 VERSION
-    0.2
+    1.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -38,14 +38,27 @@ SEE ALSO
 ## 1. Inicio
 
 ## 2. Abrir archivo, guardar las lineas en una lista y cerrar archivo
+sequences_file = open("data/dna_sequences.txt", 'r')
+file_lines = sequences_file.readlines()
+sequences_file.close()
 
 ## 3. Abrir nuevo archivo FASTA
+fasta_file = open("results/dna_sequences.fasta", 'a')
 
 ## 4. Para cada linea en la lista, crear una lista con el ID y la 
 ##    secuencia, estandarizar la secuencia y escribirla en formato FASTA
+for line in file_lines:
+    line_elements = line.split("   ")
+    seq_id = line_elements[0]
+    sequence = line_elements[1]
+    standard_sequence = sequence.upper().replace('-', '')
+    fasta_file.write(f"> {seq_id}\n{standard_sequence}")
 
 ## 5. Cerrar el nuevo archivo FASTA
+fasta_file.close()
 
 ## 6. Informar al usuario que el archivo FASTA se ha creado
+print("\nSe ha generado el archivo dna_sequences.fasta \
+      \nEl archivo se encuentra disponible en la carpeta results/ \n")
 
 ## 7. Fin
