@@ -3,7 +3,7 @@ NAME
     dna-fasta
 
 VERSION
-    0.3
+    1.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
