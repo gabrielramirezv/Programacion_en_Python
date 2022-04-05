@@ -3,7 +3,7 @@ NAME
     dna-fasta
 
 VERSION
-    1.1
+    2.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -37,14 +37,12 @@ SEE ALSO
 '''
 
 # Abrir el archivo, leer el contenido y cerrar el archivo
-dna_file = open("data/dna.txt", 'r')
-dna_sequence = dna_file.read()
-dna_file.close()
+with open("data/dna.txt", 'r') as dna_file:
+    dna_sequence = dna_file.read()
 
 # Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
-fasta_file = open("results/dna.fasta", 'w')
-fasta_file.write(f">sequence_name\n{dna_sequence}")
-fasta_file.close()
+with open("results/dna.fasta", 'w') as fasta_file:
+    fasta_file.write(f">sequence_name\n{dna_sequence}")
 
 # Informar al usuario que el archivo FASTA se ha creado
 print("\nSe ha generado el archivo dna.fasta \
