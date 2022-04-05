@@ -3,7 +3,7 @@ NAME
     AT_GC_percentage
 
 VERSION
-    1.4
+    2.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -40,9 +40,8 @@ SEE ALSO
 dna_file_name = input("\nArchivo de secuencia: ")
 
 # Abrir el archivo, leer el contenido y cerrar el archivo
-dna_file = open(dna_file_name, 'r')
-dna_sequence = dna_file.read()
-dna_file.close()
+with open(dna_file_name, 'r') as dna_file:
+    dna_sequence = dna_file.read()
 
 # Eliminar caracteres ajenos a la secuencia de DNA
 dna_sequence.rstrip('\n')
