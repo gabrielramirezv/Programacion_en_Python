@@ -3,13 +3,13 @@ NAME
     rock_paper_scissors
 
 VERSION
-    0.1
+    0.2
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/rock_paper_scissors.py
 
 DESCRIPTION
     Juego "piedra, papel o tijeras" entre computadora y usuario
