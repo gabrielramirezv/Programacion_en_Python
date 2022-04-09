@@ -56,13 +56,12 @@ computer_choice = random.choice(possible_choices)
 print(f"\nUser chose {user_choice}, computer chose {computer_choice}\n")
 
 
-# Comparar
-
-# Si la eleccion del usuario y de la computadora son iguales, es empate
+# Comparar elecciones de usuario y computadora
+# Si son iguales, imprimir empate
 if user_choice == computer_choice:
     print("Tie!\n")
 
-# Si la eleccion del usuario es "rock", evaluar eleccion de computadora
+# Si la eleccion del usuario es "rock"...
 elif user_choice == "rock":
     # Si la eleccion de la computadora es "paper", computadora gana
     if computer_choice == "paper":
@@ -71,7 +70,7 @@ elif user_choice == "rock":
     else:
         print("User wins!\n")
 
-# Si la eleccion del usuario es "paper", evaluar eleccion de computadora
+# Si la eleccion del usuario es "paper"...
 elif user_choice == "paper":
     # Si la eleccion de la computadora es "rock", usuario gana
     if computer_choice == "rock":
@@ -80,7 +79,7 @@ elif user_choice == "paper":
     else:
         print("Computer wins!\n")
 
-# Si eleccion del usuario es "scissors", evaluar eleccion de computadora
+# Si eleccion del usuario es "scissors"...
 else:
     # Si la eleccion de la computadora es "rock", computadora gana
     if computer_choice == "rock":
