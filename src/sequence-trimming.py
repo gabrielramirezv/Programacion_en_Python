@@ -3,7 +3,7 @@ NAME
     sequence-trimming
 
 VERSION
-    2.0
+    3.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -45,7 +45,7 @@ try:
 
     # Abrir nuevo archivo, escribir cada secuencia sin adaptadores y 
     # cerrar archivo
-    with open("results/4_output_no_adapters.txt", 'a') as no_adapters_file:
+    with open("results/4_output_no_adapters.txt", 'w') as no_adapters_file:
         for sequence in sequences_list:
             no_adapters_sequence = sequence[14:]
             no_adapters_file.write(no_adapters_sequence)
