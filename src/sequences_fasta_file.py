@@ -3,7 +3,7 @@ NAME
     sequences_fasta_file
 
 VERSION
-    1.1
+    2.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -43,7 +43,7 @@ file_lines = sequences_file.readlines()
 sequences_file.close()
 
 # Abrir nuevo archivo FASTA
-fasta_file = open("results/dna_sequences.fasta", 'a')
+fasta_file = open("results/dna_sequences.fasta", 'w')
 
 # Para cada linea en la lista, crear una lista con el ID y la 
 # secuencia, estandarizar la secuencia y escribirla en formato FASTA
