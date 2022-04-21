@@ -3,7 +3,7 @@ NAME
     rock_paper_scissors
 
 VERSION
-    1.0
+    2.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -37,6 +37,9 @@ SEE ALSO
 
 import random
 
+# Solicitar su nombre al usuario
+user_name = input("\nPlease, enter your name: ")
+
 # Definir opciones validas
 possible_choices = ["rock", "paper", "scissors"]
 
@@ -53,7 +56,7 @@ if user_choice not in possible_choices:
 computer_choice = random.choice(possible_choices)
 
 # Imprimir eleccion de usuario y de computadora
-print(f"\nUser chose {user_choice}, computer chose {computer_choice}\n")
+print(f"\n{user_name} chose {user_choice}, computer chose {computer_choice}\n")
 
 
 # Comparar elecciones de usuario y computadora
@@ -68,13 +71,13 @@ elif user_choice == "rock":
         print("Computer wins!\n")
     # Si la eleccion de la computadora es "scissors", usuario gana
     else:
-        print("User wins!\n")
+        print(f"{user_name} wins!\n")
 
 # Si la eleccion del usuario es "paper"...
 elif user_choice == "paper":
     # Si la eleccion de la computadora es "rock", usuario gana
     if computer_choice == "rock":
-        print("User wins!\n")
+        print(f"{user_name} wins!\n")
     # Si la eleccion de la computadora es "scissors", computadora gana
     else:
         print("Computer wins!\n")
@@ -86,4 +89,4 @@ else:
         print("Computer wins!\n")
     # Si la eleccion de la computadora es "paper", usuario gana
     else:
-        print("User wins!\n")
+        print(f"{user_name} wins!\n")
