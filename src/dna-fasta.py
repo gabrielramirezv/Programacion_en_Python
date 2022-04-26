@@ -36,14 +36,22 @@ SEE ALSO
 
 '''
 
-# Abrir el archivo, leer el contenido y cerrar el archivo
-with open("data/dna.txt", 'r') as dna_file:
-    dna_sequence = dna_file.read()
+# Intentar leer archivo de secuencia
+try:
+    # Abrir el archivo, leer el contenido y cerrar el archivo
+    with open("data/dna.txt", 'r') as dna_file:
+        dna_sequence = dna_file.read()
 
-# Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
-with open("results/dna.fasta", 'w') as fasta_file:
-    fasta_file.write(f">sequence_name\n{dna_sequence}")
+# Si no se encuentra el archivo de secuencia, notificarlo
+except IOError as io_error:
+    print(f"\nEl archivo {io_error.filename} no se encuentra.\n")
 
-# Informar al usuario que el archivo FASTA se ha creado
-print("\nSe ha generado el archivo dna.fasta \
-      \nEl archivo se encuentra disponible en la carpeta results/ \n")
+# Si se encuentra el archivo de secuencia, formatear a FASTA
+else:
+    # Abrir nuevo archivo, escribir secuencia en FASTA y cerrar archivo
+    with open("results/dna.fasta", 'w') as fasta_file:
+        fasta_file.write(f">sequence_name\n{dna_sequence}")
+
+    # Informar al usuario que el archivo FASTA se ha creado
+    print("\nSe ha generado el archivo dna.fasta \
+        \nEl archivo se encuentra disponible en la carpeta results/ \n")
