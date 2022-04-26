@@ -38,9 +38,8 @@ SEE ALSO
 '''
 
 # Abrir archivo, guardar las lineas en una lista y cerrar archivo
-sequences_file = open("data/dna_sequences.txt", 'r')
-file_lines = sequences_file.readlines()
-sequences_file.close()
+with open("data/dna_sequences.txt", 'r') as sequences_file:
+    file_lines = sequences_file.readlines()
 
 # Abrir nuevo archivo FASTA, escribir secuencias y cerrar archivo
 with open("results/dna_sequences.fasta", 'w') as fasta_file:
