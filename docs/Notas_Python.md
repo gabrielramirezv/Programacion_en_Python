@@ -406,7 +406,116 @@ En Python, cada dato en un programa es un objeto.
   print(dna)
   ```
 
-  
+
+
+
+_7 de abril de 2022_
+
+## Condicionales
+
+### Tipos de datos lógicos o booleanos
+
+Una variable o dato booleano sólo puede tomar como valores `True` o `False`.  
+
+En Python cualquier variable puede considerarse como booleana.
+
+### Operadores lógicos
+
+Son operaciones que trabajan con valores booleanos.
+
+- and
+- or
+- not
+
+### True y False
+
+No son _strings_ y no requieren comillas.
+
+```python
+print(True)
+print(False)
+```
+
+### Operadores para True y False
+
+Estos operadores evalúan una condición y regresan True o False:
+
+- Igualdad ==
+- Menor o mayor que < o >
+- No igual a !=
+- Prueba si un valor está en una lista `in`
+- j
+
+### Sentencia `if`
+
+La forma más simple de una sentencia condicional es usando `if`. Requiere evaluar una condición.
+
+La sintaxis es:
+
+```python
+if <expr>:
+    <statement>
+```
+
+#### `if` dentro de loops
+
+Se puede evaluar toda una lista usando `for` e `if`.
+
+### Diferencias entre `is` e `==`
+
+Para comparar valores se usa `==`
+
+### Sentencia `elif`
+
+```python
+file1 = open()
+file2
+file3
+for accession in accs:
+    if accession.startswitc
+```
+
+
+
+## Desarrollo de software y errores
+
+Hay diferentes tipos de errores:
+
+- Sintaxis
+- Lógicos
+- De tiempo de ejecución
+
+
+
+## Interfaz de línea de comandos (CLI)
+
+Software o herramientas cuya interfaz deinteracción con el usuario es la línea de comandos.
+
+### Herramientas de interfaz de línea de comandos (CLI)
+
+La ventaja de la línea de comandos contra interfaz gráfica es la **productividad**.
+
+```bash
+reverse complement dna.seq | cut -c1-50
+```
+
+Dado que Python es muy popular, se ha vuelto muy utilizado para crear herramientas de línea de comandos. 
+
+### Argumentos de la línea de comandos en Python
+
+Los **argumentos** son valores que se pueden utilizar dentro del programa y que son especificados en la terminal desde la línea de comando, y van después del nombre del programa.
+
+### Ayuda (--help)
+
+Podemos decirle al usuario lo que hace falta usando `if`. Ejemplo: imprimir los archivos de un `dir os.listdir("data/")`.
+
+```python
+import os
+import sys
+
+if len(sys.argv) < 2:
+    print("You need to specify the path to be listed")
+```
 
 
 
