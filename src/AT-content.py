@@ -3,7 +3,7 @@ NAME
     AT-content
 
 VERSION
-    3.0
+    3.1
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -94,8 +94,11 @@ except IOError as io_error:
 
 # Si hay una base no valida, notificarlo al usuario
 except InvalidBaseError as invalid_base_error:
-    print(invalid_base_error.args[0] 
+    print('\n' + invalid_base_error.args[0] 
           + ". Las bases aceptadas son A, T, C y G.\n")
+          
+except AmbiguousBaseError as ambiguous_base_error:
+    print("\nSecuencia ambigua. " + ambiguous_base_error.args[0] + '\n\n')
 
 # Si se encuentra archivo de secuencia y las bases son validas
 else:
