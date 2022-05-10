@@ -3,13 +3,13 @@ NAME
     AT-content
 
 VERSION
-    1.0
+    2.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/AT-content.py
 
 DESCRIPTION
     Calcula el contenido de AT en una secuencia de DNA
@@ -34,6 +34,7 @@ SEE ALSO
 '''
 
 import re
+import argparse
 
 # Definir errores para bases no validas introducidas por el usuario
 class InvalidBaseError(Exception):
@@ -41,14 +42,36 @@ class InvalidBaseError(Exception):
 class AmbiguousBaseError(Exception):
     pass
 
+# Crear el parser
+parser = argparse.ArgumentParser(description="Script que calcula el \
+contenido de AT a partir de la ruta del archivo que contiene una \
+secuencia de DNA.")
+
+# Agregar y almacenar los argumentos
+parser.add_argument("-i", "--input",
+                    metavar="path/to/file",
+                    help="File with gene sequences",
+                    required=True)
+
+parser.add_argument("-o", "--output",
+                    help="Path for the output file",
+                    required=False)
+                    
+parser.add_argument("-r", "--round",
+                    help="Number of digits to round",
+                    type=int,
+                    required=False)
+  
+args = parser.parse_args()
+
 # Leer desde teclado la ruta y nombre del archivo con la secuencia
-dna_file_name = input("\nArchivo de secuencia: ")
+dna_file_name = args.input
 
 # Intentar leer el archivo de secuencia
 try:
     # Abrir el archivo, leer el contenido y cerrar el archivo
     with open(dna_file_name, 'r') as dna_file:
-        dna_sequence = dna_file.read()
+        dna_sequence = dna_file.read().upper()
         
     # Si hay un caracter distinto a las cuatro bases aceptadas, 
     # generar un error
@@ -82,4 +105,5 @@ else:
 
     # Imprimir resultados
     print(f"\nLa secuencia de DNA es {dna_sequence}\
-    \n Porcentaje de AT y GC")
+    \n Porcentaje de AT: {at_percentage}%\n\n")
+    
