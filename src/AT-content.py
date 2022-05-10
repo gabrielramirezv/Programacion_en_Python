@@ -3,7 +3,7 @@ NAME
     AT-content
 
 VERSION
-    2.0
+    3.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -18,12 +18,17 @@ CATEGORY
     DNA sequence
 
 USAGE
-    py src/AT_GC_percentage --input [PATH] [OPTIONS]
+    py src/AT_GC_percentage.py [-h] -i path/to/input/file 
+    [-o path/to/output/file] [-r ROUND]
 
 ARGUMENTS
-    -i, --input     argumento necesario, lee la ruta del archivo con 
-                    secuencia de DNA
-                
+    -h, --help            Show a help message and exit
+    -i path/to/input/file, --input path/to/input/file
+                          File with gene sequences
+    -o path/to/output/file, --output path/to/output/file
+                          Path for the output file
+    -r ROUND, --round ROUND
+                          Number of digits to round                
 
 OUTPUT
     Porcentaje de AT en la secuencia de DNA
@@ -43,17 +48,18 @@ class AmbiguousBaseError(Exception):
     pass
 
 # Crear el parser
-parser = argparse.ArgumentParser(description="Script que calcula el \
-contenido de AT a partir de la ruta del archivo que contiene una \
-secuencia de DNA.")
+parser = argparse.ArgumentParser(description="Script que calcula el "
+        + "contenido de AT a partir de la ruta del archivo que "
+        + "contiene una secuencia de DNA.")
 
 # Agregar y almacenar los argumentos
 parser.add_argument("-i", "--input",
-                    metavar="path/to/file",
+                    metavar="path/to/input/file",
                     help="File with gene sequences",
                     required=True)
 
 parser.add_argument("-o", "--output",
+                    metavar="path/to/output/file",
                     help="Path for the output file",
                     required=False)
                     
@@ -64,14 +70,14 @@ parser.add_argument("-r", "--round",
   
 args = parser.parse_args()
 
-# Leer desde teclado la ruta y nombre del archivo con la secuencia
+# Leer la ruta y nombre del archivo con la secuencia
 dna_file_name = args.input
 
 # Intentar leer el archivo de secuencia
 try:
     # Abrir el archivo, leer el contenido y cerrar el archivo
     with open(dna_file_name, 'r') as dna_file:
-        dna_sequence = dna_file.read().upper()
+        dna_sequence = str(dna_file.read().replace('\n', ''))
         
     # Si hay un caracter distinto a las cuatro bases aceptadas, 
     # generar un error
@@ -79,7 +85,8 @@ try:
         raise InvalidBaseError(f"{dna_file_name} no contiene secuencia valida")
         
     if dna_sequence.count("N") > 0:
-        raise AmbiguousBaseError(f"La secuencia contiene {dna_sequence.count('N')} N's")
+        N_count = dna_sequence.count("N")
+        raise AmbiguousBaseError(f"La secuencia contiene {N_count} N's")
         
 # Si no se encuentra el archivo de secuencia, notificarlo
 except IOError as io_error:
@@ -102,8 +109,24 @@ else:
 
     # Calcular porcentaje de AT en la secuencia de DNA
     at_percentage = ((a_count + t_count) / dna_length) * 100
+    
+    # Si se especifica el numero de decimales, redondear
+    if args.round:
+        at_percentage = round(at_percentage, args.round)
 
     # Imprimir resultados
-    print(f"\nLa secuencia de DNA es {dna_sequence}\
-    \n Porcentaje de AT: {at_percentage}%\n\n")
+    if args.output:
+        with open(args.output, 'w') as output_file:
+            print(f"La secuencia de DNA es {dna_sequence}\
+                  \nSecuencia obtenida del archivo {dna_file_name} \
+                  \n\n Porcentaje de AT: {at_percentage} %\n\n",
+                  file=output_file)
+                  
+        print(f"\nSe ha generado el archivo {args.output}"
+              + " con el contenido de AT\n\n")
+        
+    else:
+        print(f"\nLa secuencia de DNA es {dna_sequence}\
+              \nSecuencia obtenida del archivo {dna_file_name} \
+              \n\n Porcentaje de AT: {at_percentage} %\n\n")
     
