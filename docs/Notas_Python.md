@@ -327,8 +327,6 @@ Pull baja información y push la sube
 
 `git credential-oskeychain erase` borra las credenciales previas.  
 
-
-
 Se usan casos de uso para describir los problemas.
 
 - Usar estándar PEP8
@@ -343,8 +341,6 @@ Se usan casos de uso para describir los problemas.
   - USAGE
   - ARGUMENTS
 - La primera versión que se sube a GitHub debe tener el algoritmo de lo que se desea hacer sin codificar.
-
-
 
 ## Introducción a Python
 
@@ -362,8 +358,6 @@ Es preferible usar Python 3 porque tiene soporte por parte del equipo de desarro
 
 ### Comandos sistema
 
-
-
 ### Ecosistema de Python
 
 d
@@ -378,8 +372,6 @@ Python sirve como una calculadora
 
 Son cadenas de caracteres y pueden estar encerradas entre comillas simples ('...') o comillas dobles ("...")
 
-
-
 En Python, cada dato en un programa es un objeto.
 
 - Dato es un valor
@@ -393,8 +385,6 @@ En Python, cada dato en un programa es un objeto.
 - Funcionalidades por tipo de objeto definidas por Python: métodos
 - Funciones no están vinculadas a objetos
 
-
-
 - Input: Dar una variable
 
   - input(): Ingresar un valor
@@ -405,9 +395,6 @@ En Python, cada dato en un programa es un objeto.
   dna = input('Dame una secuencia de DNA:\n')
   print(dna)
   ```
-
-
-
 
 _7 de abril de 2022_
 
@@ -475,8 +462,6 @@ for accession in accs:
     if accession.startswitc
 ```
 
-
-
 ## Desarrollo de software y errores
 
 Hay diferentes tipos de errores:
@@ -484,8 +469,6 @@ Hay diferentes tipos de errores:
 - Sintaxis
 - Lógicos
 - De tiempo de ejecución
-
-
 
 ## Interfaz de línea de comandos (CLI)
 
@@ -499,7 +482,7 @@ La ventaja de la línea de comandos contra interfaz gráfica es la **productivid
 reverse complement dna.seq | cut -c1-50
 ```
 
-Dado que Python es muy popular, se ha vuelto muy utilizado para crear herramientas de línea de comandos. 
+Dado que Python es muy popular, se ha vuelto muy utilizado para crear herramientas de línea de comandos.
 
 ### Argumentos de la línea de comandos en Python
 
@@ -517,7 +500,15 @@ if len(sys.argv) < 2:
     print("You need to specify the path to be listed")
 ```
 
+_5 de mayo de 2022_
 
+### Utilizando `argparse`
+
+Se debe checar que se cuente con la paquetería necesaria.
+
+#### NameSpace  
+
+Un NameSpace es una colección aislada de nombres o identificadores que hacen referencia a objetos. Todas las variables que de
 
 ## Comentarios
 
