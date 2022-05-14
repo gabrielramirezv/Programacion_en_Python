@@ -1,4 +1,4 @@
 Secuencia proteica: AWYMVILECDDAYRARPAPAMYLECYI                 
-Aminoacido: P                 
+Aminoacidos: ['A', 'W', 'Y', 'V', 'L', 'E', 'R', 'P']                 
 
- Contenido de P en la secuencia: 7.4074 %
+ Contenido de ['A', 'W', 'Y', 'V', 'L', 'E', 'R', 'P'] en la secuencia: 70.3704 %
