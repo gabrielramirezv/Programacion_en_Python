@@ -510,6 +510,13 @@ Se debe checar que se cuente con la paquetería necesaria.
 
 Un NameSpace es una colección aislada de nombres o identificadores que hacen referencia a objetos. Todas las variables que de
 
+## Módulos
+_19 de mayo de 2022_
+
+## Expresiones regulares
+_26 de mayo de 2022_
+`re.search(pattern, )`
+
 ## Comentarios
 
 Tienes unos apuntes muy ordenados <3
