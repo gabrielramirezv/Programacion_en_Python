@@ -3,13 +3,13 @@ NAME
     ProteinTools
 
 VERSION
-    0.1
+    1.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/ProteinTools.py
 
 DESCRIPTION
     Herramientas para el manejo de secuencias proteicas
@@ -21,7 +21,7 @@ USAGE
     import ProteinTools
 
 SEE ALSO
-    AT_GC_percentage
+    FastaTools
 
 '''
 
