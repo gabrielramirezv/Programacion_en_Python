@@ -9,7 +9,7 @@ AUTHOR
     Gabriel Ramirez Vilchis
 
 GITHUB
-    
+    https://github.com/gabrielramirezv/Programacion_en_Python/blob/master/src/FastaTools.py
 
 DESCRIPTION
     Herramientas para el manejo de archivos FASTA
