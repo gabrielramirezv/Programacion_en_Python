@@ -45,7 +45,7 @@ def get_sequence_from_fasta_file(fasta_file_name):
             # Si la linea no es el encabezado, agregarla a la secuencia
             for line in fasta_file:
                 if not re.search("^>.+", line):
-                    sequence_fragment = line.strip('\n')
+                    sequence_fragment = line.rstrip()
                     sequence += sequence_fragment
                     
     # Si no se encuentra el archivo de secuencia, notificarlo
