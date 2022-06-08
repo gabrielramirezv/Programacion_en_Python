@@ -1,10 +1,10 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" width="120" height="120" align="right" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" width="120" height="120" align="right" />  
 
-# Notas - Programación en Python  
+# Notas - Programación en Python I  
 
-**Gabriel Ramírez Vilchis**  
+[_Licenciatura en Ciencias Genómicas_](https://www.lcg.unam.mx/)  
 
-Licenciatura en Ciencias Genómicas
+Notas de: **Gabriel Ramírez Vilchis**  
 
 ## Markdown  
 
@@ -159,7 +159,7 @@ _10, 17 y 24 de febrero de 2022_
 
 #### ¿Qué queremos lograr con el desarrollo de un software?  
 
-Es importante saber cuál es el problema a resolver. Debemos codificar de tal manera que si se lo pasamos a a alguien más, esa persona pueda continuar con nuestro código.  
+Es importante saber cuál es el problema a resolver. Debemos codificar de tal manera que si se lo pasamos a a alguien más, esa persona pueda continuar trabajando con nuestro código sin ningún problema.  
 
 #### ¿Cómo lograrlo?  
 
@@ -175,7 +175,9 @@ Hay estándares que son básicos para escribir código, lo cual permite codifica
 
 Al desarrollar software buscamos:
 
-- Resolver problema
+- Resolver problemas.  
+- Que el código pueda ser utilizado por más personas
+- Que el código pueda entenderse y modificarse fácilmente.  
 
 La solución debe tener prácticas y características que permitan recordar o que otras personas lo entiendan
 
@@ -183,17 +185,14 @@ La solución debe tener prácticas y características que permitan recordar o qu
 
 Se basa en lineamientos que usan muchos programadores alrededor del mundo.
 
-- Encabezado de programas
-
+- Encabezado de programas.
 - Documentación interna. Pocas líneas que nos ayuden a recordar con palabras claves lo que hace una línea de código.
-- Nombres adecuados de variables y métodos/funciones
+- Nombres adecuados de variables y métodos/funciones.  
 - Nombre adecuado de programas.
+- Organización del código.  
+- Retroalimentación.  
 
-Debemos tener un control (automatizado o manual) de las versiones del código
-
-Sirve para identificar lo que fue cambiando en un documento de código.
-
-Para el control de versiones es importante
+Debemos tener un control (automatizado o manual) de las versiones, lo cual sirve para identificar lo que fue cambiando en un documento de código.
 
 #### Control de versiones
 
@@ -251,26 +250,35 @@ Git es un sistema de control de versiones que permite el trabajo colaborativo.
 #### Trabajar con Git
 
 1. Instalar y configurar
-2. Esquema de trabajo
+2. Esquema de trabajo  
+3. Crear un repositorio  
+4. Inicializar el repositorio  
+5. Crear un programa y agregarlo a Git  
+6. Commit  
+7. Explorar el historial  
+8. Comparar archivos  
+9. Ignorar archivos por elección propia  
 
 ### Comandos importantes
 
-`git --version`Devuelve la versión de Git instalada
+`git --version` Devuelve la versión de Git instalada
 
-`git config --global user.name "[TuNombre]"`
+`git config --global user.name "[TuNombre]"` Sirve para configurar el nombre de usuario en Git  
 
 ### Esquema de trabajo
 
-Git no controla todo lo que se almacene en el repositorio Git, por lo que hay que indicarle que lo haga usando `git add`, con lo que empezará a preparar almacenando temporalmente los cambios, y cuando le indiquemos que confirme esos cambios usamos `git commit`
+Git no controla todo lo que se almacene en el repositorio Git, por lo que hay que indicarle que lo haga usando `git add`, con lo que empezará a preparar almacenando temporalmente los cambios, y cuando le indiquemos que confirme esos cambios usamos `git commit`  
 
-Repositorio: carpeta que contiene el seguimiento de los cambios que se realicen en el código.
+**Repositorio:** Carpeta que contiene el seguimiento de los cambios que se realicen en el código.
 
 ### Crear un repositorio
 
-- Definir la ruta de trabajo
-- Crear una carpeta
+1. Definir la ruta de trabajo  
+2. Crear una carpeta  
+3. Entrar a la carpeta  
+4. Crear la estructura interna  
 
-#### Buenas prácticas
+#### Buenas prácticas  
 
 Seguir una estructura de organización de carpetas y archivos para proyectos.
 
@@ -279,15 +287,13 @@ Seguir una estructura de organización de carpetas y archivos para proyectos.
 - src
 - test
 
-¡No meterse con .git!
+**Importante:** ¡No meterse con .git! Es importante para que el repositorio esté controlado por Git, el controlador de versiones.
 
-Git es el controlador de versiones
+`git init` Sirve para inicializar el repositorio
 
-git init
+`git add` Sirve para que agregar cambios hechos al código
 
-git add
-
-git commit -m "Mensaje"
+`git commit -m "Mensaje"` Sirve para confirmar los cambios realizados  
 
 ### Mensaje para el commit
 
@@ -295,21 +301,23 @@ Escribir un mensaje que describa con precisión los cambios que se han realizado
 
 ### Ramas de Git  
 
-La rama **master** es la empleada por defecto en Git
+La rama **master** es la empleada por defecto en Git.  
 
-Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD\~1, el tercero el HEAD\~2, y así sucesivamente.
+Git permite hacer referencia a los commits a través de cabeceras. Si se quiere hacer referencia a un commit se puede hacer por medio del identificador o de la cabecera. El commit más reciente se encuentra hasta arriba, por lo que es el HEAD. El segundo más reciente será el HEAD\~1, el tercero el HEAD\~2, y así sucesivamente.  
 
 ### Restaurar una versión  
 
 Para restaurar una versión usamos `git checkout [HEAD|IdCommit] [file]`
 
-git log
+`git log`  
 
-git log -N
+`git log -N`  
 
-git log --oneline
+`git log --oneline`  
 
-git diff HEAD ~#
+`git diff HEAD~#`  
+
+### Ignorar archivos  
 
 El archivo **.gitignore** le indica a Git cuáles son los archivos que debe ignorar.
 
@@ -323,15 +331,19 @@ GitHub es una plataforma web que permite alojar proyectos basados en Git, hacien
 
 GitHub Desktop es la interfaz gráfica de GitHub, que permite la interacción con la plataforma desde nuestra plataforma.
 
-Pull baja información y push la sube
+### Comandos importantes para GitHub  
+
+`pull` baja información y `push` la sube
 
 `git credential-oskeychain erase` borra las credenciales previas.  
 
 Se usan casos de uso para describir los problemas.
 
+### Consejos para documentación de código  
+
 - Usar estándar PEP8
 - No escribir "código spaghetti o repetir"
-  - Refactorizar: Q
+  - Refactorizar
 - Comentar el código, iniciando con un encabezado
   - TITLE
   - VERSION
@@ -342,7 +354,9 @@ Se usan casos de uso para describir los problemas.
   - ARGUMENTS
 - La primera versión que se sube a GitHub debe tener el algoritmo de lo que se desea hacer sin codificar.
 
-## Introducción a Python
+## Introducción a Python  
+
+_10 de marzo de 2022_  
 
 Python es un lenguaje interpretado, por lo que lee las instrucciones y las ejecuta en tiempo real.
 
@@ -510,12 +524,45 @@ Se debe checar que se cuente con la paquetería necesaria.
 
 Un NameSpace es una colección aislada de nombres o identificadores que hacen referencia a objetos. Todas las variables que de
 
-## Módulos
-_19 de mayo de 2022_
+## Programación modular  
 
-## Expresiones regulares
-_26 de mayo de 2022_
-`re.search(pattern, )`
+_19 de mayo de 2022_  
+
+### ¿Qué es la programación modular?  
+
+La programación modular es un paradigma de programación que consiste en dividir un programa en módulos o subprogramas con el fin de hacerlo más legible y manejable.  
+
+Algunas de sus ventajas son:  
+
+- Simplicidad  
+- Facilidad de mantenimiento  
+- Reusabilidad  
+
+### Módulos  
+
+Los módulos son bloques de código con funciones y clases. Tienen extensión `.py` y sirven para realizar tareas comunes.  
+
+Los módulos pueden escribirse en Python o en C, y se cargan utilizando `import`.
+
+## Expresiones regulares  
+
+_26 de mayo de 2022_  
+
+### Patrones  
+
+Un patrón es una regularidad, una sucesión de elementos que se construye siguiendo una **regla** (repetición o recurrencia) al observar las regularidades.
+
+### ¿Qué es una expresión regular?  
+
+Una expresión regular, _regex_ o _regexp_, es una secuencia de caracteres que conforma un patrón de búsqueda, y se usan para encontrar una combinación determinada de caracteres en una cadena de texto.  
+
+### Uso de expresiones regulares en Python  
+
+Para usar expresiones regulares en Python, se utiliza el módulo `re`.
+
+Para buscar un patrón en un _string_, se utiliza `search` de la siguiente manera:
+
+`re.search(pattern, string, flags)`
 
 ## Comentarios
 
