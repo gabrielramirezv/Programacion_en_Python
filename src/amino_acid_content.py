@@ -3,7 +3,7 @@ NAME
     amino_acid_content
 
 VERSION
-    4.0
+    5.0
 
 AUTHOR
     Gabriel Ramirez Vilchis
@@ -43,9 +43,10 @@ SEE ALSO
 
 # Standard library imports
 import argparse
+import re
 
 # Local application/library specific imports
-from ProteinTools import get_aa_percentage
+from ProteinTools import get_aa_percentages
 from FastaTools import get_sequence_from_fasta_file
 
 
@@ -76,7 +77,8 @@ parser.add_argument("-f", "--file",
 parser.add_argument("-a", "--aminoacids",
                     help="Amino acids to search (single-letter code)",
                     type=list,
-                    required=False)
+                    required=False,
+                    default="ARNDCQEGHILKMFPSTWYV")
 
 parser.add_argument("-o", "--output",
                     metavar="path/to/output/file",
@@ -87,20 +89,21 @@ parser.add_argument("-o", "--output",
 parser.add_argument("-r", "--round",
                     help="Number of digits to round",
                     type=int,
-                    required=False)
+                    required=False,
+                    default=4)
   
 args = parser.parse_args()
 
 
-# Recibir secuencia y aminoacido como argumentos desde linea de comandos
+# Recibir secuencia y aminoacidos como argumentos desde linea de comandos
 try:
     
     # Generar errores si no se ingreso archivo o secuencia, o si se 
     # ingresaron ambos a la vez
     if not (args.sequence or args.file):
-        raise LackOfInputError("No se cuenta con secuencia a analizar. ")
+        raise LackOfInputError("\nNo se cuenta con secuencia a analizar.")
     elif args.sequence and args.file:
-        raise DoubleInputError("Se ingresaron secuencia y archivo a la vez. ")
+        raise DoubleInputError("\nSe ingresaron secuencia y archivo a la vez.")
         
     # Si se ingresaron inputs de la forma correcta, obtener la secuencia
     elif args.sequence and not args.file:
@@ -112,39 +115,68 @@ try:
     # Obtener la lista de aminoacidos
     amino_acids_list = args.aminoacids
     
+    # Obtener decimales a redondear
+    decimals = args.round
+    
 # Notificar exepciones al usuario
 except LackOfInputError as lack_of_input_error:
     print(lack_of_input_error.args[0] 
-          + "Ingrese un archivo FASTA de aminoacidos o una secuencia.\n")
+          + " Ingrese un archivo FASTA de aminoacidos o una secuencia.\n")
 except DoubleInputError as double_input_error:
     print(double_input_error.args[0] 
-          + "Ingrese un archivo FASTA de aminoacidos o una secuencia.\n")
+          + " Ingrese un archivo FASTA de aminoacidos o una secuencia.\n")
+
 
 # Calcular porcentaje de aminoacidos si se leyeron datos exitosamente
 else:
-    # Obtener el contenido de aminoacido en la secuencia
-    amino_acid_content = get_aa_percentage(protein_sequence, amino_acids_list)
-
-    # Redondear el porcentaje si fue solicitado por el usuario
-    if args.round:
-        amino_acid_content = round(amino_acid_content, args.round)
+    
+    # Obtener el contenido de aminoacidos en la secuencia
+    aa_percentages_list = get_aa_percentages(
+            protein_sequence, amino_acids_list, decimals)
+            
+    # Guardar aminoacidos a buscar en formato de string
+    amino_acids = ', '.join(amino_acids_list)
 
     # Imprimir el porcentaje en el archivo indicado por el usuario
     if args.output:
-            with open(args.output, 'w') as output_file:
-                print(f"Secuencia proteica: {protein_sequence} \
-                    \nAminoacidos: {amino_acids_list} \
-                    \n\n Contenido de {amino_acids_list} en la secuencia:"
-                    + f" {amino_acid_content} %",
-                    file=output_file)
-                    
+        with open(args.output, 'w') as output_file:
+            output_file.write(f"Secuencia proteica:\n")
+            
+            # Si el input es un archivo, escribir la secuencia 
+            # linea por linea (conservar saltos de linea)
+            if args.file:
+                with open(fasta_file_name, 'r') as fasta_file:
+                    for line in fasta_file:
+                        if not re.search("^>.+", line):
+                            output_file.write(line)
+                            
+            # Si el input es solo la secuencia, escribirla
+            else:
+                output_file.write(f"{protein_sequence}\n")
+                
+            # Escribir aminoacidos buscados
+            output_file.write(f"\nAminoacidos buscados: {amino_acids} \
+                \n\nContenido de aminoacidos en la secuencia:")
+                
+            # Escribir aminoacidos con sus porcentajes
+            for position in range(0, len(amino_acids_list)):
+                if aa_percentages_list[position]:
+                    output_file.write(f"\n{amino_acids_list[position]}:  "
+                                + f"{aa_percentages_list[position]} %")
+            
+            # Notificar al usuario que se ha creado el archivo
             print(f"\nSe ha generado el archivo {args.output}"
                 + f" con el contenido de {amino_acids_list}.\n\n")
 
-    # Imprimir resultado a pantalla si no fue solicitado un archivo output
+
+    # Imprimir resultado a pantalla si no fue solicitado archivo output
     else:
         print(f"\nSecuencia proteica: {protein_sequence} \
-            \nAminoacidos: {amino_acids_list} \
-            \n\n Contenido de {amino_acids_list} en la secuencia:"
-            + f" {amino_acid_content} %\n\n")
+            \n\nAminoacidos buscados: {amino_acids} \
+            \n\nContenido de aminoacidos en la secuencia:")
+        for position in range(0, len(amino_acids_list)):
+            if aa_percentages_list[position]:
+                print(f"{amino_acids_list[position]}:  "
+                       + f"{aa_percentages_list[position]} %")
+        print('\n')
     
